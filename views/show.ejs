@@ -1,0 +1,17 @@
+<% include ./partials/header.ejs %>
+  <div class="w-full min-h-screen bg-zinc-700 px-10 py-8">
+    <div class="cards flex flex-wrap gap-10">
+        <% user.posts.forEach(function(elm){ %>
+                <div class="w-32 h-40 bg-zinc-500 rounded-lg border-2 text-white" id="<%= elm._id %>">
+                    <img class="w-full h-full object-cover overflow-hidden" src="/images/uploads/<%= elm.image %>" alt="">
+                    <h5 class="mt-2 text-center text-medium"><%= elm.title %></h5>
+                </div> 
+     <%   }) %>
+        
+</div>
+</div>
+</div>
+
+
+
+<% include ./partials/footer.ejs %>
